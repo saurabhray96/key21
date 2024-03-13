@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shivRatree</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        img {
+            position: absolute;
+            width: 200px;
+            filter: drop-shadow(9px 5px 10px black);
+        }
+    </style>
+</head>
+
+<body>
+    <p style="filter:drop-shadow(2px 2px 5px red ); font-size: 20px; font-weight: 700; ">महाशिवरात्रि की हार्दिक
+        शुभकामनाएं !</p>
+    <img src="bholenath.png" alt="">
+    <div id="power" style="width: 4px; border-radius: 50%; border: 3px solid black;
+     box-shadow: 2px 2px 9px 2px yellow ; height: 4px; position: absolute;
+      margin: 190px 250px; background-position: center; background-size: cover; background-image: url(unnamed.jpg); ">
+    </div>
+    <script>
+        var power = document.getElementById('power');
+        let c = 0, d = 250, t = 180;
+        function run() {
+            setInterval(function () {
+                power.style.marginTop = t + "px";
+                power.style.marginLeft = d + "px";
+                power.style.width = c + "px";
+                power.style.height = c + "px";
+                c++
+                d--;
+                t++;
+            }, 100)
+        };
+        run();
+    </script>
+</body>
+
+</html>
